@@ -43,6 +43,7 @@ def upload_photos():
                      })
                 result = json.loads(connection.getresponse().read())
 
+
                 # Check file uploaded
                 if 'name' not in result:
                     print ("An error ocurred when uploading the file. Will try again later.")
@@ -82,7 +83,7 @@ def upload_photos():
 # This function will be called when movement is detected
 def motion_detected(channel):
    # Take a photo and store it in the current directory
-   name = "photos/photo_%s.jpg" % time.strftime("%H:%M:%S")
+   name = "photos/photo_%s.jpg" % time.strftime("%H-%M-%S")
    camera.capture(name)
    print "Photo '%s' Taken!!" % name
    upload_photos()
@@ -102,13 +103,4 @@ GPIO.add_event_detect(sensor, GPIO.RISING, callback=motion_detected, bouncetime=
 
 # Code will keep running until you press the enter key on your keyboard
 close = raw_input("Press ENTER to exit\n")
-print "Closing..
-
-#print connection.getresponse().read()
-#
-#curl -X POST \
-#  -H "X-Parse-Application-Id: isdYXvAUFKbG4ORugc9uUpmrNVydIK3ypqNSiMTP" \
-#  -H "X-Parse-REST-API-Key: Bfvy3hrs6VVjw6rqgFHhU3pT3q9RTc2bkm4zwlzh" \
-#  -H "Content-Type: image/png" \
-#  --data-binary '@add_watchkit_target 15-54-09-789.png' \
-#  https://api.parse.com/1/files/add_watchkit_target 15-54-09-789.png
+print "Closing.."
