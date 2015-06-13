@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Intruder Alarm": {
+      "applicationId": "SRy8RdMuTcwIKE3jP2imojT0tw6Wv4f5C96VHWGW",
+      "masterKey": "ArCfrycMQdAEJun3mHC9M2OihAEN0RwH8hc21sIH"
+    },
+    "_default": {
+      "link": "Intruder Alarm"
+    }
+  }
+}
